@@ -16,7 +16,7 @@ def carregar_linhas_postgres(df):
     db_host = "localhost"
     db_port = "5432"
 
-    conexao = f"postgresql://{db_user}:{db_pass}@{db_host}:{db_port}/{db_name}"
+    conexao = f"postgresql+psycopg2://{db_user}:{db_pass}@{db_host}:{db_port}/{db_name}"
     engine = create_engine(conexao)
 
     try: 
